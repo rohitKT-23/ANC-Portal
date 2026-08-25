@@ -109,7 +109,21 @@ function renderCompletedSRs() {
   renderSrTable('completedSrBody', 'completedSrCount', filterSRs(completedSRs, search, status, type));
 }
 
+function wrapAccordionBodies() {
+  document.querySelectorAll('.acc-body').forEach((body) => {
+    if (body.querySelector(':scope > .acc-body-inner')) return;
+    const inner = document.createElement('div');
+    inner.className = 'acc-body-inner';
+    while (body.firstChild) {
+      inner.appendChild(body.firstChild);
+    }
+    body.appendChild(inner);
+  });
+}
+
 function initAccordions() {
+  wrapAccordionBodies();
+
   document.querySelectorAll('.acc-header').forEach((btn) => {
     btn.addEventListener('click', () => {
       const section = btn.closest('.acc-section');
