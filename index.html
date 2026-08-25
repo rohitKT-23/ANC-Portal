@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ANC Direct Customer Portal — Account Home (Preview)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=REM:wght@300;400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="portal-header">
+    <div class="portal-header-inner">
+      <div class="portal-logo">ANC FREE ZONE</div>
+      <nav class="portal-nav">
+        <a href="#" class="active">Home</a>
+        <a href="#">Members/Employees</a>
+        <a href="#">Create Service Requests</a>
+        <a href="#">In-Progress Requests</a>
+        <a href="#">Completed Requests</a>
+      </nav>
+      <div class="portal-utils">
+        <span class="util-icon" title="Search" aria-label="Search"></span>
+        <span class="util-icon util-bell has-dot" title="Notifications" aria-label="Notifications"></span>
+        <span class="util-icon util-user" title="Profile" aria-label="Profile"></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="account-home">
+    <main class="dashboard">
+      <!-- Page header -->
+      <div class="page-header">
+        <div class="page-header-text">
+          <p class="page-eyebrow">Account overview</p>
+          <h1 class="page-title">INVESTAX</h1>
+          <p class="page-subtitle">Free Zone Company - FZC LLC</p>
+        </div>
+        <div class="page-header-actions">
+          <button type="button" class="btn btn-primary">+ New Service Request</button>
+          <button type="button" class="btn btn-secondary btn-trade-license">View Trade License</button>
+        </div>
+      </div>
+
+      <!-- Overview: License + E-Wallet + Announcements (unchanged) -->
+      <div class="top-grid">
+        <div class="top-grid-main">
+          <section class="acc-section is-open" data-section="license">
+            <button type="button" class="acc-header" data-toggle="license">
+              <span class="acc-title">License Details</span>
+              <span class="acc-chevron">▾</span>
+            </button>
+            <div class="acc-body">
+              <div class="field-grid">
+                <div class="field-row">
+                  <span class="field-label">License Number</span>
+                  <span class="field-value">26245308888</span>
+                </div>
+                <div class="field-row">
+                  <span class="field-label">License Status</span>
+                  <span class="status-badge status-success">Active</span>
+                </div>
+                <div class="field-row">
+                  <span class="field-label">Company Type</span>
+                  <span class="field-value">Free Zone Company - FZC LLC</span>
+                </div>
+                <div class="field-row">
+                  <span class="field-label">Primary Activity</span>
+                  <span class="field-value">Management Consultancies</span>
+                </div>
+                <div class="field-row">
+                  <span class="field-label">Issue Date</span>
+                  <span class="field-value">09/12/2024</span>
+                </div>
+                <div class="field-row">
+                  <span class="field-label">Expiry Date</span>
+                  <span class="field-value">08/12/2025</span>
+                </div>
+                <div class="field-row">
+                  <span class="field-label">Package</span>
+                  <span class="field-value">Standard Package</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="acc-section is-open" data-section="ewallet">
+            <button type="button" class="acc-header" data-toggle="ewallet">
+              <span class="acc-title">E-Wallet Details</span>
+              <span class="acc-chevron">▾</span>
+            </button>
+            <div class="acc-body">
+              <div class="field-grid">
+                <div class="field-row">
+                  <span class="field-label">E-Wallet Number</span>
+                  <span class="field-value">EW-000021</span>
+                </div>
+                <div class="field-row">
+                  <span class="field-label">Available Balance</span>
+                  <span class="field-value field-balance">AED 120.00</span>
+                </div>
+                <div class="field-row">
+                  <span class="field-label">Total Top-up Amount</span>
+                  <span class="field-value">AED 5,340.00</span>
+                </div>
+                <div class="field-row">
+                  <span class="field-label">Total Consumed Amount</span>
+                  <span class="field-value">AED 5,220.00</span>
+                </div>
+                <div class="field-row">
+                  <span class="field-label">Freeze / Restrict E-Wallet?</span>
+                  <span class="field-value">No</span>
+                </div>
+                <div class="field-row">
+                  <span class="field-label">E-Wallet Activated By</span>
+                  <span class="field-value field-link">Kabir Ahmad</span>
+                </div>
+                <div class="field-row">
+                  <span class="field-label">E-Wallet Activation Date</span>
+                  <span class="field-value">30/09/2025, 2:15 PM</span>
+                </div>
+                <div class="field-row">
+                  <span class="field-label">E-Wallet Adjustments</span>
+                  <span class="field-value field-empty"></span>
+                </div>
+                <div class="field-row">
+                  <span class="field-label">E-Wallet Adjustments Comments</span>
+                  <span class="field-value field-empty"></span>
+                </div>
+              </div>
+              <div class="ewallet-actions">
+                <button type="button" class="btn btn-primary btn-sm">Top Up</button>
+                <button type="button" class="btn btn-secondary btn-sm">View History</button>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <aside class="announce-card">
+          <div class="announce-header">
+            <h2 class="announce-heading">Notifications &amp; Announcements</h2>
+          </div>
+          <div class="announce-body">
+            <div class="announce-item">
+              <div class="announce-title-row">
+                <h3 class="announce-title">PCC Requirement for Visa Applications - Applicable Nationalities</h3>
+                <span class="new-tag">NEW</span>
+              </div>
+              <p class="announce-summary">
+                Police Clearance Certificate (PCC) is required for selected nationalities when applying for visas.
+                Please review the full list before submitting a service request.
+              </p>
+              <button type="button" class="btn btn-text">View details</button>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Main content tabs -->
+      <nav class="main-tabs" role="tablist" aria-label="Account sections">
+        <button type="button" class="main-tab active" data-main-tab="company" role="tab" aria-selected="true">
+          Company Information
+        </button>
+        <button type="button" class="main-tab" data-main-tab="members" role="tab" aria-selected="false">
+          Members / Shareholders
+        </button>
+        <button type="button" class="main-tab" data-main-tab="services" role="tab" aria-selected="false">
+          Service Requests
+        </button>
+      </nav>
+
+      <!-- Tab: Company Information -->
+      <div class="main-tab-panel is-active" id="panel-company" role="tabpanel">
+        <div class="tab-panel-stack">
+          <section class="acc-section is-open" data-section="activities">
+            <button type="button" class="acc-header" data-toggle="activities">
+              <span class="acc-title">Company Activities</span>
+              <span class="acc-chevron">▾</span>
+            </button>
+            <div class="acc-body">
+              <div class="table-wrap">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Serial No.</th>
+                      <th>Activity Name</th>
+                      <th>Activity Name [Arabic]</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-label="Serial No.">1</td>
+                      <td data-label="Activity Name">Non Specialized Wholesale Trading</td>
+                      <td data-label="Activity Name [Arabic]" class="cell-ar">تجارة الجملة غير المتخصصة</td>
+                      <td data-label="Status">Active</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Serial No.">2</td>
+                      <td data-label="Activity Name">E-Commerce</td>
+                      <td data-label="Activity Name [Arabic]" class="cell-ar">التجارة الإلكترونية</td>
+                      <td data-label="Status">Active</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Serial No.">3</td>
+                      <td data-label="Activity Name">Management Consultancies</td>
+                      <td data-label="Activity Name [Arabic]" class="cell-ar">استشارات إدارية</td>
+                      <td data-label="Status">Active</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Serial No.">4</td>
+                      <td data-label="Activity Name">Business Incubators</td>
+                      <td data-label="Activity Name [Arabic]" class="cell-ar">حاضنات الأعمال</td>
+                      <td data-label="Status">Active</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Serial No.">5</td>
+                      <td data-label="Activity Name">Document Clearing Services</td>
+                      <td data-label="Activity Name [Arabic]" class="cell-ar">خدمات تخليص المعاملات</td>
+                      <td data-label="Status">Active</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="table-pager">
+                <span class="table-footer">1-5 of 10</span>
+                <div class="pager-controls">
+                  <button type="button" class="btn btn-secondary btn-sm" disabled>Previous</button>
+                  <span class="pager-page">Page 1 of 2</span>
+                  <button type="button" class="btn btn-secondary btn-sm">Next</button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="acc-section" data-section="echannel">
+            <button type="button" class="acc-header" data-toggle="echannel">
+              <span class="acc-title">E-Channel Details</span>
+              <span class="acc-chevron">▾</span>
+            </button>
+            <div class="acc-body">
+              <div class="field-grid">
+                <div class="field-row">
+                  <span class="field-label">E-Channel Issue Date</span>
+                  <span class="field-value">09/12/2024</span>
+                </div>
+                <div class="field-row">
+                  <span class="field-label">E-Channel Expiry Date</span>
+                  <span class="field-value">08/12/2025</span>
+                </div>
+                <div class="field-row">
+                  <span class="field-label">E-Channel Cancellation Date</span>
+                  <span class="field-value field-empty"></span>
+                </div>
+                <div class="field-row">
+                  <span class="field-label">E-Channel Status</span>
+                  <span class="status-badge status-error">Cancelled</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="acc-section" data-section="establishment">
+            <button type="button" class="acc-header" data-toggle="establishment">
+              <span class="acc-title">Establishment Card Details</span>
+              <span class="acc-chevron">▾</span>
+            </button>
+            <div class="acc-body">
+              <div class="field-grid">
+                <div class="field-row">
+                  <span class="field-label">Establishment Card Number</span>
+                  <span class="field-value">148376</span>
+                </div>
+                <div class="field-row">
+                  <span class="field-label">Establishment Card Status</span>
+                  <span class="status-badge status-error">Cancelled</span>
+                </div>
+                <div class="field-row">
+                  <span class="field-label">Establishment Card Issue Date</span>
+                  <span class="field-value">07/12/2024</span>
+                </div>
+                <div class="field-row">
+                  <span class="field-label">Establishment Card Expiry Date</span>
+                  <span class="field-value">06/12/2025</span>
+                </div>
+                <div class="field-row">
+                  <span class="field-label">Establishment Card Cancellation Date</span>
+                  <span class="field-value field-empty"></span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="acc-section" data-section="tenancy">
+            <button type="button" class="acc-header" data-toggle="tenancy">
+              <span class="acc-title">Tenancy Contract</span>
+              <span class="acc-chevron">▾</span>
+            </button>
+            <div class="acc-body">
+              <div class="table-wrap">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Status</th>
+                      <th>Start Date</th>
+                      <th>End Date</th>
+                      <th>Location</th>
+                      <th>View</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-label="Name">TC-0022599</td>
+                      <td data-label="Status"><span class="status-badge status-success">Active</span></td>
+                      <td data-label="Start Date">25/08/2026</td>
+                      <td data-label="End Date">24/08/2027</td>
+                      <td data-label="Location">CWS-1V-000318</td>
+                      <td data-label="View">
+                        <button type="button" class="btn btn-text btn-sm" title="View contract">View</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="table-footer">1-1 of 1</p>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- Tab: Members / Shareholders -->
+      <div class="main-tab-panel" id="panel-members" role="tabpanel" hidden>
+        <div class="tab-panel-stack">
+          <section class="acc-section is-open" data-section="shareholders">
+            <button type="button" class="acc-header" data-toggle="shareholders">
+              <span class="acc-title">Shareholders</span>
+              <span class="acc-chevron">▾</span>
+            </button>
+            <div class="acc-body">
+              <div class="table-wrap">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Share %</th>
+                      <th>Passport</th>
+                      <th>Nationality</th>
+                      <th>Share Certificate</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-label="Name"><span class="field-link">Anjali Susan Mathew</span></td>
+                      <td data-label="Share %">100</td>
+                      <td data-label="Passport">W5933330</td>
+                      <td data-label="Nationality">India</td>
+                      <td data-label="Share Certificate">
+                        <button type="button" class="btn btn-text btn-sm" title="View certificate">View</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <section class="acc-section is-open" data-section="signatories">
+            <button type="button" class="acc-header" data-toggle="signatories">
+              <span class="acc-title">Signatories &amp; Officers</span>
+              <span class="acc-chevron">▾</span>
+            </button>
+            <div class="acc-body">
+              <div class="table-wrap">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Passport</th>
+                      <th>UAE Mobile</th>
+                      <th>Email</th>
+                      <th>Nationality</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td colspan="5" class="empty-cell">
+                        <p>No signatories or officers found.</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <section class="acc-section" data-section="others">
+            <button type="button" class="acc-header" data-toggle="others">
+              <span class="acc-title">Others</span>
+              <span class="acc-chevron">▾</span>
+            </button>
+            <div class="acc-body">
+              <div class="table-wrap">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Role</th>
+                      <th>Passport</th>
+                      <th>Nationality</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td colspan="4" class="empty-cell">
+                        <p>No other members found.</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- Tab: Service Requests -->
+      <div class="main-tab-panel" id="panel-services" role="tabpanel" hidden>
+        <div class="requests-card">
+          <div class="requests-header">
+            <h2 class="section-heading">Service Requests</h2>
+          </div>
+
+          <section class="acc-section is-open nested-acc" data-section="sr-pending">
+            <button type="button" class="acc-header" data-toggle="sr-pending">
+              <span class="acc-title">Pending Actions</span>
+              <span class="acc-chevron">▾</span>
+            </button>
+            <div class="acc-body">
+              <div class="sr-filters">
+                <div class="filter-field">
+                  <label class="filter-label" for="pendingSearch">Search</label>
+                  <input type="search" id="pendingSearch" class="search-input"
+                    placeholder="SR Number, Subject, Service Type, Member, Status..." />
+                </div>
+                <div class="filter-field">
+                  <label class="filter-label" for="pendingStatus">Status</label>
+                  <select id="pendingStatus" class="filter-select">
+                    <option value="">All statuses</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Draft">Draft</option>
+                    <option value="Returned for Modification">Returned for Modification</option>
+                  </select>
+                </div>
+                <div class="filter-field">
+                  <label class="filter-label" for="pendingType">Service Type</label>
+                  <select id="pendingType" class="filter-select">
+                    <option value="">All service types</option>
+                    <option value="Renewal">Renewal</option>
+                    <option value="New">New</option>
+                  </select>
+                </div>
+              </div>
+              <div class="table-wrap">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Service Request Number</th>
+                      <th>Subject</th>
+                      <th>Service Type</th>
+                      <th>Members Name</th>
+                      <th>Status</th>
+                      <th>SR Created Date</th>
+                    </tr>
+                  </thead>
+                  <tbody id="pendingSrBody"></tbody>
+                </table>
+              </div>
+              <p class="table-footer" id="pendingSrCount"></p>
+            </div>
+          </section>
+
+          <section class="acc-section nested-acc" data-section="sr-completed">
+            <button type="button" class="acc-header" data-toggle="sr-completed">
+              <span class="acc-title">Completed Actions</span>
+              <span class="acc-chevron">▾</span>
+            </button>
+            <div class="acc-body">
+              <div class="sr-filters">
+                <div class="filter-field">
+                  <label class="filter-label" for="completedSearch">Search</label>
+                  <input type="search" id="completedSearch" class="search-input"
+                    placeholder="SR Number, Subject, Service Type, Member, Status..." />
+                </div>
+                <div class="filter-field">
+                  <label class="filter-label" for="completedStatus">Status</label>
+                  <select id="completedStatus" class="filter-select">
+                    <option value="">All statuses</option>
+                    <option value="Completed">Completed</option>
+                    <option value="Closed">Closed</option>
+                  </select>
+                </div>
+                <div class="filter-field">
+                  <label class="filter-label" for="completedType">Service Type</label>
+                  <select id="completedType" class="filter-select">
+                    <option value="">All service types</option>
+                    <option value="Renewal">Renewal</option>
+                    <option value="New">New</option>
+                  </select>
+                </div>
+              </div>
+              <div class="table-wrap">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Service Request Number</th>
+                      <th>Subject</th>
+                      <th>Service Type</th>
+                      <th>Members Name</th>
+                      <th>Status</th>
+                      <th>SR Created Date</th>
+                    </tr>
+                  </thead>
+                  <tbody id="completedSrBody"></tbody>
+                </table>
+              </div>
+              <p class="table-footer" id="completedSrCount"></p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer class="portal-footer">
+    <div class="portal-footer-inner">
+      <span>+971 6 8088 888</span>
+      <span>info@ancfz.ae</span>
+      <span>Po. Box 4848, Ajman, UAE</span>
+    </div>
+    <p class="portal-footer-copy">© 2024 Ajman NuVentures Centre Free Zone | Privacy Policy | Terms of Use</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
