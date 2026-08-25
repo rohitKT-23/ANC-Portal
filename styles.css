@@ -354,50 +354,39 @@ body {
   transform: rotate(-90deg);
 }
 
+/* Smooth open/close: single inner wrapper required (added by JS) */
 .acc-body {
   display: grid;
   grid-template-rows: 0fr;
-  opacity: 0;
-  transition:
-    grid-template-rows var(--ancfz-transition-slow),
-    opacity 0.25s ease;
+  transition: grid-template-rows var(--ancfz-transition-slow);
 }
 
 .acc-section.is-open .acc-body {
   grid-template-rows: 1fr;
-  opacity: 1;
 }
 
 .acc-body-inner {
   overflow: hidden;
   min-height: 0;
-}
-
-.acc-body > * {
-  overflow: hidden;
-  min-height: 0;
-}
-
-/* Keep padding only when open via inner content spacing */
-.acc-section.is-open .acc-body {
-  padding: 0;
-}
-
-.acc-section.is-open .acc-body > .field-grid,
-.acc-section.is-open .acc-body > .table-wrap,
-.acc-section.is-open .acc-body > .ewallet-actions,
-.acc-section.is-open .acc-body > .table-pager,
-.acc-section.is-open .acc-body > .table-footer,
-.acc-section.is-open .acc-body > .sr-filters {
-  /* spacing handled below */
-}
-
-.acc-body {
+  opacity: 0;
   padding: 0 16px;
+  transition:
+    opacity 0.25s ease,
+    padding var(--ancfz-transition-slow);
 }
 
-.acc-section.is-open .acc-body {
+.acc-section.is-open .acc-body-inner {
+  opacity: 1;
   padding: 4px 16px 16px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .acc-body,
+  .acc-body-inner,
+  .acc-chevron,
+  .btn {
+    transition: none !important;
+  }
 }
 
 /* ---------- Fields ---------- */
