@@ -901,3 +901,123 @@ body {
     text-transform: uppercase;
   }
 }
+
+/* ---------- List pages (Members / In-Progress / Completed) ---------- */
+.list-page .dashboard {
+  padding-top: var(--ancfz-space-lg);
+}
+
+.list-card {
+  background: var(--ancfz-surface);
+  border: 1px solid var(--ancfz-border);
+  border-radius: var(--ancfz-radius);
+  box-shadow: var(--ancfz-shadow);
+  overflow: hidden;
+}
+
+.list-card-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--ancfz-space-md);
+  padding: 16px 16px 12px;
+  border-bottom: 1px solid var(--ancfz-border-soft);
+}
+
+.list-meta {
+  margin: 6px 0 0;
+  font-size: 0.8125rem;
+  color: var(--ancfz-text-muted);
+}
+
+.list-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ancfz-space-md);
+  padding: var(--ancfz-space-md);
+  border-bottom: 1px solid var(--ancfz-border-soft);
+  background: #fafbfc;
+}
+
+.date-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--ancfz-space-sm);
+}
+
+.date-filter-btn.is-active {
+  background-color: var(--ancfz-primary);
+  color: var(--ancfz-white);
+  border-color: var(--ancfz-primary);
+}
+
+.date-filter-btn.is-active:hover {
+  background-color: #2d4180;
+  color: var(--ancfz-white);
+}
+
+.role-filter-btn.is-active {
+  background-color: var(--ancfz-primary);
+  color: var(--ancfz-white);
+  border-color: var(--ancfz-primary);
+}
+
+.role-filter-btn.is-active:hover {
+  background-color: #2d4180;
+  color: var(--ancfz-white);
+}
+
+.list-toolbar .search-row {
+  max-width: 360px;
+  margin-left: auto;
+}
+
+.list-card .data-table thead th {
+  background: #f8f9fb;
+  color: var(--ancfz-primary);
+}
+
+.list-card .data-table tbody td .field-link {
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.list-card .data-table tbody td .field-link:hover {
+  color: var(--ancfz-secondary);
+}
+
+.row-action {
+  background: transparent;
+  border: 1px solid var(--ancfz-border);
+  color: var(--ancfz-primary);
+  width: 28px;
+  height: 28px;
+  border-radius: var(--ancfz-radius);
+  cursor: pointer;
+  font-size: 0.875rem;
+  line-height: 1;
+  transition: background-color var(--ancfz-transition), border-color var(--ancfz-transition);
+}
+
+.row-action:hover {
+  background: #f0f3fa;
+  border-color: var(--ancfz-primary);
+}
+
+.col-index {
+  width: 48px;
+  color: var(--ancfz-text-muted);
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .list-toolbar .search-row {
+    max-width: none;
+    width: 100%;
+    margin-left: 0;
+  }
+}

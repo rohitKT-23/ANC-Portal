@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ANC Direct Customer Portal — Members / Employees</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=REM:wght@300;400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="list-page">
+  <header class="portal-header">
+    <div class="portal-header-inner">
+      <div class="portal-logo">ANC FREE ZONE</div>
+      <nav class="portal-nav">
+        <a href="index.html">Home</a>
+        <a href="members.html" class="active">Members/Employees</a>
+        <a href="#">Create Service Requests</a>
+        <a href="in-progress.html">In-Progress Requests</a>
+        <a href="completed.html">Completed Requests</a>
+      </nav>
+      <div class="portal-utils">
+        <span class="util-icon" title="Search" aria-label="Search"></span>
+        <span class="util-icon util-bell has-dot" title="Notifications" aria-label="Notifications"></span>
+        <span class="util-icon util-user" title="Profile" aria-label="Profile"></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="account-home">
+    <main class="dashboard">
+      <div class="page-header">
+        <div class="page-header-text">
+          <p class="page-eyebrow">Directory</p>
+          <h1 class="page-title">Members / Employees</h1>
+          <p class="page-subtitle">View and manage company members linked to your account</p>
+        </div>
+        <div class="page-header-actions">
+          <button type="button" class="btn btn-primary">+ New</button>
+        </div>
+      </div>
+
+      <section class="list-card">
+        <div class="list-card-header">
+          <div>
+            <h2 class="section-heading">All Members</h2>
+            <p class="list-meta" id="listMeta">0 items · Sorted by Name · Filtered by All members</p>
+          </div>
+        </div>
+
+        <div class="list-toolbar">
+          <div class="date-filters role-filters" role="group" aria-label="Member role filters">
+            <button type="button" class="btn btn-secondary btn-sm role-filter-btn" data-role="Manager">Manager</button>
+            <button type="button" class="btn btn-secondary btn-sm role-filter-btn" data-role="UBO">UBO</button>
+            <button type="button" class="btn btn-secondary btn-sm role-filter-btn" data-role="Shareholder">Shareholder</button>
+            <button type="button" class="btn btn-secondary btn-sm role-filter-btn" data-role="Others">Others</button>
+          </div>
+          <div class="search-row">
+            <input
+              type="search"
+              id="listSearch"
+              class="search-input"
+              placeholder="Search this list..."
+              aria-label="Search members"
+            />
+            <button type="button" class="btn btn-secondary btn-sm" id="btnReset">Reset</button>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th class="col-index">#</th>
+                <th>Name</th>
+                <th>Company Name</th>
+                <th>Title</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Owner</th>
+                <th>Created Date</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="listBody"></tbody>
+          </table>
+        </div>
+        <div class="table-pager" style="padding: 12px 16px;">
+          <span class="table-footer" id="listCount"></span>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="portal-footer">
+    <div class="portal-footer-inner">
+      <span>+971 6 8088 888</span>
+      <span>info@ancfz.ae</span>
+      <span>Po. Box 4848, Ajman, UAE</span>
+    </div>
+    <p class="portal-footer-copy">© 2024 Ajman NuVentures Centre Free Zone | Privacy Policy | Terms of Use</p>
+  </footer>
+
+  <script src="list-pages.js"></script>
+  <script>
+    initListPage('members');
+  </script>
+</body>
+</html>
