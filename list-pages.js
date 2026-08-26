@@ -7,8 +7,7 @@ const MEMBERS = [
   {
     name: 'test2 knscyaa',
     company: 'ATT Service',
-    title: '',
-    role: 'Others',
+    role: '',
     phone: '0600000000',
     email: 'test2knscyaa@exmpl.com',
     owner: 'Zaafar Ali',
@@ -17,8 +16,7 @@ const MEMBERS = [
   {
     name: 'test3 knscyaa',
     company: 'ATT Service',
-    title: '',
-    role: 'Others',
+    role: '',
     phone: '0600000000',
     email: 'test3knscyaa@exmpl.com',
     owner: 'Imran Kadavath',
@@ -27,7 +25,6 @@ const MEMBERS = [
   {
     name: 'test4 knscyaa',
     company: 'ATT Service',
-    title: '',
     role: 'UBO',
     phone: '0600000000',
     email: 'test4knscyaa@exmpl.com',
@@ -37,7 +34,6 @@ const MEMBERS = [
   {
     name: 'Ahmed Hassan',
     company: 'INVESTAX',
-    title: 'Manager',
     role: 'Manager',
     phone: '0501234567',
     email: 'ahmed.hassan@investax.ae',
@@ -47,7 +43,6 @@ const MEMBERS = [
   {
     name: 'Sara Al Mansouri',
     company: 'INVESTAX',
-    title: 'Shareholder',
     role: 'Shareholder',
     phone: '0559876543',
     email: 'sara.mansouri@investax.ae',
@@ -57,8 +52,7 @@ const MEMBERS = [
   {
     name: 'Anjali Susan Mathew',
     company: 'INVESTAX',
-    title: 'Director',
-    role: 'Shareholder',
+    role: 'Director',
     phone: '0521112233',
     email: 'anjali.mathew@investax.ae',
     owner: 'Kabir Ahmad',
@@ -67,8 +61,7 @@ const MEMBERS = [
   {
     name: 'Kabir Ahmad',
     company: 'INVESTAX',
-    title: 'Authorized Manager',
-    role: 'Manager',
+    role: 'Manager, UBO',
     phone: '0507654321',
     email: 'kabir.ahmad@investax.ae',
     owner: 'Kabir Ahmad',
@@ -77,8 +70,7 @@ const MEMBERS = [
   {
     name: 'Omar Al Nuaimi',
     company: 'INVESTAX',
-    title: 'Beneficial Owner',
-    role: 'UBO',
+    role: 'Shareholder, Manager, UBO',
     phone: '0543332211',
     email: 'omar.nuaimi@investax.ae',
     owner: 'Kabir Ahmad',
@@ -207,9 +199,35 @@ function onlyCompletedStatus(rows) {
   return rows.filter((r) => String(r.status || '').toLowerCase() === 'completed');
 }
 
+const PRIMARY_ROLES = ['Manager', 'UBO', 'Shareholder'];
+
+/** Split "Manager, UBO" → ['Manager', 'UBO'] */
+function parseRoleTokens(roleStr) {
+  return String(roleStr || '')
+    .split(',')
+    .map((r) => r.trim())
+    .filter(Boolean);
+}
+
+function hasPrimaryRole(tokens, roleName) {
+  const target = roleName.toLowerCase();
+  return tokens.some((t) => t.toLowerCase() === target);
+}
+
 function filterByRole(rows, role) {
   if (!role) return rows;
-  return rows.filter((r) => String(r.role || '') === role);
+
+  if (role === 'Others') {
+    return rows.filter((r) => {
+      const tokens = parseRoleTokens(r.role);
+      // Others = no Manager / UBO / Shareholder token
+      return !PRIMARY_ROLES.some((p) => hasPrimaryRole(tokens, p));
+    });
+  }
+
+  // Manager / UBO / Shareholder: match if Role contains that token
+  // e.g. Manager matches "Manager" and "Manager, UBO"
+  return rows.filter((r) => hasPrimaryRole(parseRoleTokens(r.role), role));
 }
 
 function renderMembers(rows) {
@@ -227,7 +245,7 @@ function renderMembers(rows) {
       <td data-label="#" class="col-index">${i + 1}</td>
       <td data-label="Name"><span class="field-link">${escapeHtml(m.name)}</span></td>
       <td data-label="Company Name"><span class="field-link">${escapeHtml(m.company)}</span></td>
-      <td data-label="Title">${escapeHtml(m.title) || '—'}</td>
+      <td data-label="Role">${escapeHtml(m.role) || '—'}</td>
       <td data-label="Phone">${escapeHtml(m.phone)}</td>
       <td data-label="Email"><span class="field-link">${escapeHtml(m.email)}</span></td>
       <td data-label="Owner">${escapeHtml(m.owner)}</td>
@@ -313,7 +331,6 @@ function initListPage(page) {
       rows = filterByTerm(rows, term, [
         'name',
         'company',
-        'title',
         'role',
         'phone',
         'email',

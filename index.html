@@ -46,12 +46,11 @@
       <!-- Overview: License + E-Wallet + Announcements (unchanged) -->
       <div class="top-grid">
         <div class="top-grid-main">
-          <section class="acc-section is-open" data-section="license">
-            <button type="button" class="acc-header" data-toggle="license">
-              <span class="acc-title">License Details</span>
-              <span class="acc-chevron">▾</span>
-            </button>
-            <div class="acc-body">
+          <section class="static-card" data-section="license">
+            <div class="static-card-header">
+              <h2 class="acc-title">License Details</h2>
+            </div>
+            <div class="static-card-body">
               <div class="field-grid">
                 <div class="field-row">
                   <span class="field-label">License Number</span>
@@ -85,12 +84,11 @@
             </div>
           </section>
 
-          <section class="acc-section is-open" data-section="ewallet">
-            <button type="button" class="acc-header" data-toggle="ewallet">
-              <span class="acc-title">E-Wallet Details</span>
-              <span class="acc-chevron">▾</span>
-            </button>
-            <div class="acc-body">
+          <section class="static-card" data-section="ewallet">
+            <div class="static-card-header">
+              <h2 class="acc-title">E-Wallet Details</h2>
+            </div>
+            <div class="static-card-body">
               <div class="field-grid">
                 <div class="field-row">
                   <span class="field-label">E-Wallet Number</span>
@@ -124,10 +122,6 @@
                   <span class="field-label">E-Wallet Adjustments</span>
                   <span class="field-value field-empty"></span>
                 </div>
-                <div class="field-row">
-                  <span class="field-label">E-Wallet Adjustments Comments</span>
-                  <span class="field-value field-empty"></span>
-                </div>
               </div>
               <div class="ewallet-actions">
                 <button type="button" class="btn btn-primary btn-sm">Top Up</button>
@@ -137,25 +131,220 @@
           </section>
         </div>
 
-        <aside class="announce-card">
-          <div class="announce-header">
-            <h2 class="announce-heading">Notifications &amp; Announcements</h2>
-          </div>
-          <div class="announce-body">
-            <div class="announce-item">
-              <div class="announce-title-row">
-                <h3 class="announce-title">PCC Requirement for Visa Applications - Applicable Nationalities</h3>
-                <span class="new-tag">NEW</span>
-              </div>
-              <p class="announce-summary">
-                Police Clearance Certificate (PCC) is required for selected nationalities when applying for visas.
-                Please review the full list before submitting a service request.
-              </p>
-              <button type="button" class="btn btn-text">View details</button>
+        <div class="top-grid-side">
+          <aside class="announce-card">
+            <div class="announce-header">
+              <h2 class="announce-heading">Notifications &amp; Announcements</h2>
             </div>
+            <div class="announce-body">
+              <div class="announce-item">
+                <div class="announce-title-row">
+                  <h3 class="announce-title">PCC Requirement for Visa Applications - Applicable Nationalities</h3>
+                  <span class="new-tag">NEW</span>
+                </div>
+                <p class="announce-summary">
+                  Police Clearance Certificate (PCC) is required for selected nationalities when applying for visas.
+                  Please review the full list before submitting a service request.
+                </p>
+                <button type="button" class="btn btn-text">View details</button>
+              </div>
+            </div>
+          </aside>
+
+          <div class="side-cards-row">
+            <!-- ID-style Authorized Manager card (narrower) -->
+            <aside class="manager-id-card" aria-label="Authorized Manager">
+              <div class="manager-id-band">
+                <span class="manager-id-org">Authorized Manager</span>
+              </div>
+              <div class="manager-id-body">
+                <div class="manager-id-fields">
+                  <div class="manager-id-row">
+                    <span class="manager-id-label">Authorized Manager</span>
+                    <span class="manager-id-value field-link">Adelin Tchakounte Tchoutang</span>
+                  </div>
+                  <div class="manager-id-row">
+                    <span class="manager-id-label">Contact Mobile</span>
+                    <span class="manager-id-value">0600000000</span>
+                  </div>
+                  <div class="manager-id-row">
+                    <span class="manager-id-label">Nationality (English)</span>
+                    <span class="manager-id-value">Cameroon</span>
+                  </div>
+                  <div class="manager-id-row">
+                    <span class="manager-id-label">Email</span>
+                    <a class="manager-id-value field-link" href="mailto:test2knscyaa@exmpl.com">test2knscyaa@exmpl.com</a>
+                  </div>
+                </div>
+              </div>
+            </aside>
+
+            <aside class="employees-card" aria-label="Number Of Employees">
+              <div class="employees-card-header">
+                <h2 class="announce-heading">Number Of Employees</h2>
+              </div>
+              <div class="employees-card-body">
+                <span class="employees-count">12</span>
+                <span class="employees-label">Employees</span>
+              </div>
+            </aside>
           </div>
-        </aside>
+        </div>
       </div>
+
+      <!-- Package & Visa Quota blocks (before main tabs) -->
+      <section class="quota-section" aria-label="Package and Visa Quota">
+        <div class="quota-section-header">
+          <h2 class="section-heading">Package &amp; Visa Quota</h2>
+          <p class="list-meta">All Inclusive package consumption overview</p>
+        </div>
+
+        <div class="quota-grid">
+          <article class="quota-card quota-card--package">
+            <h3 class="quota-card-title">Package Detail</h3>
+            <div class="quota-card-body">
+              <div class="quota-metric">
+                <span class="quota-label">Package Detail</span>
+                <span class="quota-value field-link">All Inclusive - 4 Visas Package</span>
+              </div>
+              <div class="quota-metric">
+                <span class="quota-label">Visa Quota Allocated</span>
+                <span class="quota-value">24</span>
+              </div>
+              <div class="quota-metric">
+                <span class="quota-label">Visa Quota Allowed</span>
+                <span class="quota-value">20</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="quota-card quota-card--core">
+            <h3 class="quota-card-title">Core Consumed</h3>
+            <div class="quota-card-body">
+              <div class="quota-metric">
+                <span class="quota-label">Security Approval Consumed</span>
+                <span class="quota-value">2</span>
+              </div>
+              <div class="quota-metric">
+                <span class="quota-label">Establishment Card Consumed</span>
+                <span class="quota-value">1</span>
+              </div>
+              <div class="quota-metric">
+                <span class="quota-label">E-Channel Consumed</span>
+                <span class="quota-value">1</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="quota-card">
+            <h3 class="quota-card-title">Entry Permit</h3>
+            <div class="quota-card-body quota-card-body--trio">
+              <div class="quota-metric">
+                <span class="quota-label">Utilized</span>
+                <span class="quota-value">20</span>
+              </div>
+              <div class="quota-metric">
+                <span class="quota-label">Consumed</span>
+                <span class="quota-value">20</span>
+              </div>
+              <div class="quota-metric">
+                <span class="quota-label">Balance</span>
+                <span class="quota-value quota-value--balance">4</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="quota-card">
+            <h3 class="quota-card-title">VSC</h3>
+            <div class="quota-card-body quota-card-body--trio">
+              <div class="quota-metric">
+                <span class="quota-label">Utilized</span>
+                <span class="quota-value">15</span>
+              </div>
+              <div class="quota-metric">
+                <span class="quota-label">Consumed</span>
+                <span class="quota-value">15</span>
+              </div>
+              <div class="quota-metric">
+                <span class="quota-label">Balance</span>
+                <span class="quota-value quota-value--balance">9</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="quota-card">
+            <h3 class="quota-card-title">Residence Visa</h3>
+            <div class="quota-card-body quota-card-body--trio">
+              <div class="quota-metric">
+                <span class="quota-label">Utilized</span>
+                <span class="quota-value">17</span>
+              </div>
+              <div class="quota-metric">
+                <span class="quota-label">Consumed</span>
+                <span class="quota-value">17</span>
+              </div>
+              <div class="quota-metric">
+                <span class="quota-label">Balance</span>
+                <span class="quota-value quota-value--balance">7</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="quota-card">
+            <h3 class="quota-card-title">Medical</h3>
+            <div class="quota-card-body quota-card-body--trio">
+              <div class="quota-metric">
+                <span class="quota-label">Utilized</span>
+                <span class="quota-value">20</span>
+              </div>
+              <div class="quota-metric">
+                <span class="quota-label">Consumed</span>
+                <span class="quota-value">20</span>
+              </div>
+              <div class="quota-metric">
+                <span class="quota-label">Balance</span>
+                <span class="quota-value quota-value--balance">4</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="quota-card">
+            <h3 class="quota-card-title">Residence Renewal</h3>
+            <div class="quota-card-body quota-card-body--trio">
+              <div class="quota-metric">
+                <span class="quota-label">Utilized</span>
+                <span class="quota-value quota-value--empty">—</span>
+              </div>
+              <div class="quota-metric">
+                <span class="quota-label">Consumed</span>
+                <span class="quota-value quota-value--empty">—</span>
+              </div>
+              <div class="quota-metric">
+                <span class="quota-label">Balance</span>
+                <span class="quota-value quota-value--balance">24</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="quota-card">
+            <h3 class="quota-card-title">Medical Renewal</h3>
+            <div class="quota-card-body quota-card-body--trio">
+              <div class="quota-metric">
+                <span class="quota-label">Utilized</span>
+                <span class="quota-value quota-value--empty">—</span>
+              </div>
+              <div class="quota-metric">
+                <span class="quota-label">Consumed</span>
+                <span class="quota-value quota-value--empty">—</span>
+              </div>
+              <div class="quota-metric">
+                <span class="quota-label">Balance</span>
+                <span class="quota-value quota-value--balance">24</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
 
       <!-- Main content tabs -->
       <nav class="main-tabs" role="tablist" aria-label="Account sections">
