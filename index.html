@@ -52,13 +52,25 @@
           <h1 class="page-title">INVESTAX</h1>
           <p class="page-subtitle">Free Zone Company - FZC LLC</p>
         </div>
-        <div class="page-header-actions">
-          <button type="button" class="btn btn-primary">+ New Service Request</button>
-          <button type="button" class="btn btn-secondary btn-trade-license">View Trade License</button>
+        <div class="page-header-aside">
+          <div class="page-header-actions">
+            <button type="button" class="btn btn-primary">+ New Service Request</button>
+            <button type="button" class="btn btn-secondary btn-trade-license">View Trade License</button>
+          </div>
+          <div class="ewallet-summary" aria-label="E-Wallet summary">
+            <div class="ewallet-summary-item">
+              <span class="ewallet-summary-label">E-Wallet</span>
+              <span class="ewallet-summary-value">EW-000021</span>
+            </div>
+            <div class="ewallet-summary-item">
+              <span class="ewallet-summary-label">Available Balance</span>
+              <span class="ewallet-summary-value ewallet-summary-balance">AED 120.00</span>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- Overview: License + E-Wallet + Announcements (unchanged) -->
+      <!-- Overview: License + Announcements -->
       <div class="top-grid">
         <div class="top-grid-main">
           <section class="static-card" data-section="license">
@@ -95,32 +107,32 @@
             </div>
           </section>
 
-          <section class="static-card" data-section="ewallet">
-            <div class="static-card-header">
-              <h2 class="acc-title">E-Wallet Details</h2>
+          <section class="static-card expiry-card" aria-label="Expiring visas and permits">
+            <div class="static-card-header expiry-card-header">
+              <h2 class="acc-title">Action Required — Expiring Visas &amp; Permits</h2>
             </div>
-            <div class="static-card-body">
-              <div class="field-grid">
-                <div class="field-row">
-                  <span class="field-label">E-Wallet Number</span>
-                  <span class="field-value">EW-000021</span>
-                </div>
-                <div class="field-row">
-                  <span class="field-label">Available Balance</span>
-                  <span class="field-value field-balance">AED 120.00</span>
-                </div>
-                <div class="field-row">
-                  <span class="field-label">Total Top-up Amount</span>
-                  <span class="field-value">AED 5,340.00</span>
-                </div>
-                <div class="field-row">
-                  <span class="field-label">Total Consumed Amount</span>
-                  <span class="field-value">AED 5,220.00</span>
-                </div>
+            <div class="static-card-body expiry-card-body">
+              <div class="table-wrap">
+                <table class="data-table expiry-table">
+                  <thead>
+                    <tr>
+                      <th class="col-index">#</th>
+                      <th>Member Name</th>
+                      <th>Document</th>
+                      <th>Days Remaining</th>
+                      <th class="col-action">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="expiryAlertsBody"></tbody>
+                </table>
               </div>
-              <div class="ewallet-actions">
-                <button type="button" class="btn btn-primary btn-sm">Top Up</button>
-                <button type="button" class="btn btn-secondary btn-sm">View History</button>
+              <div class="table-pager" id="expiryPager" hidden>
+                <span class="table-footer" id="expiryCount"></span>
+                <div class="pager-controls">
+                  <button type="button" class="btn btn-secondary btn-sm" id="expiryPrev" disabled>Previous</button>
+                  <span class="pager-page" id="expiryPageLabel">Page 1 of 1</span>
+                  <button type="button" class="btn btn-secondary btn-sm" id="expiryNext" disabled>Next</button>
+                </div>
               </div>
             </div>
           </section>
@@ -184,6 +196,28 @@
               </div>
             </aside>
           </div>
+
+          <aside class="manager-id-card relationship-manager-card" aria-label="Relationship Manager">
+            <div class="manager-id-band">
+              <span class="manager-id-org">Relationship Manager</span>
+            </div>
+            <div class="manager-id-body">
+              <div class="manager-id-fields">
+                <div class="manager-id-row">
+                  <span class="manager-id-label">Manager Name</span>
+                  <span class="manager-id-value field-link">Zaafar Ali</span>
+                </div>
+                <div class="manager-id-row">
+                  <span class="manager-id-label">Agent Name</span>
+                  <span class="manager-id-value">E W B S STAR BUSINESSMEN SERVICES L.L.C</span>
+                </div>
+                <div class="manager-id-row">
+                  <span class="manager-id-label">Registration By</span>
+                  <span class="manager-id-value">Channel Partner</span>
+                </div>
+              </div>
+            </div>
+          </aside>
         </div>
       </div>
 

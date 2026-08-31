@@ -243,7 +243,7 @@ body {
 
 .page-title {
   margin: 0;
-  font-size: 1.75rem;
+  font-size: 2.75rem;
   font-weight: 800;
   color: var(--ancfz-primary);
   line-height: 1.2;
@@ -251,16 +251,62 @@ body {
 
 .page-subtitle {
   margin: var(--ancfz-space-xs) 0 0;
-  font-size: 0.9375rem;
+  font-size: 1.5rem;
   color: var(--ancfz-text-muted);
   font-weight: 400;
+}
+
+.page-header-aside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--ancfz-space-md);
+  margin-left: auto;
 }
 
 .page-header-actions {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: var(--ancfz-space-sm);
   flex-wrap: wrap;
+}
+
+.ewallet-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--ancfz-space-md);
+  min-width: 400px;
+  padding: 10px 12px; 
+  background: var(--ancfz-surface);
+  border: 1px solid var(--ancfz-border);
+  border-radius: var(--ancfz-radius);
+  box-shadow: var(--ancfz-shadow);
+}
+
+.ewallet-summary-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ewallet-summary-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ancfz-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.ewallet-summary-value {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--ancfz-text);
+}
+
+.ewallet-summary-balance {
+  color: var(--ancfz-primary);
+  font-size: 1rem;
 }
 
 .btn-trade-license {
@@ -370,6 +416,66 @@ body {
 .top-grid-side > .side-cards-row {
   flex: 1;
   min-height: 0;
+}
+
+.expiry-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ancfz-space-md);
+}
+
+.expiry-card-header .acc-title {
+  margin: 0;
+}
+
+.expiry-card-body {
+  padding: 0;
+}
+
+.expiry-card-body .table-wrap {
+  border: none;
+  border-radius: 0;
+}
+
+.expiry-card-body .table-pager {
+  padding: 12px 16px;
+  border-top: 1px solid var(--ancfz-border-soft);
+}
+
+.expiry-table thead th {
+  background: #f8f9fb;
+  color: var(--ancfz-primary);
+  font-size: 0.75rem;
+}
+
+.expiry-table .col-action {
+  text-align: right;
+  width: 120px;
+}
+
+.expiry-days {
+  font-weight: 700;
+  color: var(--ancfz-text);
+}
+
+.expiry-days.is-urgent {
+  color: var(--ancfz-warning);
+}
+
+.expiry-doc-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #eef2fa;
+  color: var(--ancfz-primary);
+}
+
+.expiry-doc-badge.is-entry {
+  background: #e8f7fa;
+  color: #0d7a8c;
 }
 
 /* ---------- Static overview cards (always open) ---------- */
@@ -652,6 +758,10 @@ body {
 .side-cards-row > .employees-card {
   height: 100%;
   min-height: 100%;
+}
+
+.relationship-manager-card {
+  width: 100%;
 }
 
 /* ---------- Authorized Manager ID card ---------- */
@@ -1256,12 +1366,22 @@ a.manager-id-value:hover {
     width: auto;
   }
 
+  .page-header-aside {
+    width: 100%;
+    align-items: stretch;
+  }
+
   .page-header-actions {
     width: 100%;
   }
 
   .page-header-actions .btn {
     flex: 1;
+  }
+
+  .ewallet-summary {
+    min-width: 0;
+    width: 100%;
   }
 
   .main-tab {
